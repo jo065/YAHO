@@ -1,7 +1,7 @@
 package org.example.member.repository;
 
 import org.example.db.DBConnection;
-import org.example.Util.Util;
+import org.example.util.Util;
 import org.example.Container;
 import org.example.member.entity.Member;
 
@@ -33,7 +33,7 @@ public class MemberRepository {
         sb.append(String.format("gender = '%s' ", gender));
         int id = dbConnection.insert(sb.toString());
 
-        Member member = new Member(id, userId, password, gender, Util.nowDateTime());
+        Member member = new Member(id, userId, password, gender, Util.regDate());
         members.add(member);
 
         return member.getUserId();

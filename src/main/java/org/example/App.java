@@ -1,7 +1,7 @@
 package org.example;
 
 import org.example.db.DBConnection;
-import org.example.entity.DefaultCommand;
+import org.example.DefaultCommand;
 import org.example.member.controller.MemberController;
 
 public class App {
@@ -22,8 +22,8 @@ public class App {
 
         while (true) {
             System.out.println("\n== 로그인을 진행해주세요. (계정이 없다면 회원가입을 진행해주세요.) ==");
-            System.out.println("\n1.로그인 / 2.회원가입 / 3.로그아웃 / 4.종료");
-            System.out.print("입력 :");
+            System.out.println("\n▶ 로그인 / ▶ 회원가입 / ▶ 로그아웃 / ▶ 종료");
+            System.out.print("입력 : ");
             String command = Container.getSc().nextLine().trim();
 
             switch (command) {

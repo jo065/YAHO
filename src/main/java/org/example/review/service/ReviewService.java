@@ -10,18 +10,21 @@ import org.example.review.repository.ReviewRepository;
 public class ReviewService {
     ReviewRepository reviewRepository = new ReviewRepository();
 
-    public void writeService(long id, String title, String content, String userId){
-        reviewRepository.writeRepository(id, title, content, userId);
+    public void writeService(long id, String title, String content, int score, String memberId, String regDate) {
+        reviewRepository.writeRepository(id, title, content, score, memberId, regDate);
     }
-    public void listService(){
+
+    public void listService() {
         reviewRepository.listRepository();
 
     }
-    public void modifyService(Review review, String modifyTitle, String modifyContent){
+
+    public void modifyService(Review review, String modifyTitle, String modifyContent) {
         reviewRepository.modifyRepository(review, modifyTitle, modifyContent);
 
     }
-    public void removeService(Review review){
+
+    public void removeService(Review review) {
         reviewRepository.removeRepository(review);
 
     }
@@ -29,7 +32,8 @@ public class ReviewService {
     public Review getfindByIdService(int id) {
         return reviewRepository.getfindByIdRepository(id);
     }
-    public void myReviewListService(){
+
+    public void myReviewListService() {
         reviewRepository.myReviewListRepository();
     }
 }

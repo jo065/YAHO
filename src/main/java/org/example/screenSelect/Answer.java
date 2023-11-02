@@ -1,7 +1,7 @@
 package org.example.screenSelect;
 
 import org.example.Container;
-import org.example.entity.DefaultCommand;
+import org.example.DefaultCommand;
 import org.example.review.controller.ReviewController;
 import org.example.screenSelect.MainScreen;
 
@@ -13,8 +13,8 @@ public class Answer {
 
         while (true) {
             System.out.println("\n리뷰를 작성하시겠습니까?");
-            System.out.println("\n1.네 2.아니요");
-            System.out.print("입력 :");
+            System.out.println("\n▶ 네   ▶ 아니요");
+            System.out.print("입력 : ");
             String commandAnswer = Container.getSc().nextLine().trim();
 
             switch (commandAnswer){

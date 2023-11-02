@@ -1,7 +1,7 @@
 package org.example.mountain.controller;
 
 import org.example.Container;
-import org.example.entity.DefaultCommand;
+import org.example.DefaultCommand;
 import org.example.screenSelect.Answer;
 
 public class MountainController {
@@ -10,7 +10,7 @@ public class MountainController {
 
         while (true) {
             System.out.println("\n== 경기도 지역의 산을 선택해주세요. ==");
-            System.out.println("\n1.청계산 /2.불장산 /3.구룡산 /4.관악산");
+            System.out.println("\n▶ 청계산 / ▶ 불장산 / ▶ 구룡산 / ▶ 관악산");
             System.out.print("입력 :");
             String commandMountain = Container.getSc().nextLine().trim();
 
@@ -37,7 +37,7 @@ public class MountainController {
     public void gangwonDo() {
         while (true) {
             System.out.println("\n== 강원도 지역의 산을 선택해주세요. ==");
-            System.out.println("\n1.오대산 /2.봉평산 /3.설악산 /4.태백산 /5.속리산");
+            System.out.println("\n▶ 오대산 / ▶ 봉평산 / ▶ 설악산 / ▶ 태백산 / ▶ 속리산");
             System.out.print("입력 :");
             String commandMountain = Container.getSc().nextLine().trim();
 
@@ -68,7 +68,7 @@ public class MountainController {
     public void chungcheongDo() {
         while (true) {
             System.out.println("\n== 충청도 지역의 산을 선택해주세요. ==");
-            System.out.println("\n1.계룡산 /2.백운산 /3.대덕산 /4.내장산 /5.소백산");
+            System.out.println("\n▶ 계룡산 / ▶ 백운산 / ▶ 대덕산 / ▶ 내장산 / ▶ 소백산");
             System.out.print("입력 :");
             String commandMountain = Container.getSc().nextLine().trim();
 
@@ -98,7 +98,7 @@ public class MountainController {
     public void kyongsangDo() {
         while (true) {
             System.out.println("\n== 경상도 지역의 산을 선택해주세요. ==");
-            System.out.println("\n1.공주산 /2.토함산 /3.대왕약산 /4.구룡산 /5.콘솔산");
+            System.out.println("\n▶ 공주산 / ▶ 토함산 / ▶ 대왕약산 / ▶ 구룡산 / ▶ 콘솔산");
             System.out.print("입력 :");
             String commandMountain = Container.getSc().nextLine().trim();
 
@@ -128,7 +128,7 @@ public class MountainController {
     public void jeollaDo() {
         while (true) {
             System.out.println("\n== 전라도 지역의 산을 선택해주세요. ==");
-            System.out.println("\n1.월출산 /2.무등산 /3.무안고덕산 /4.장안산 /5.오리유산");
+            System.out.println("\n▶ 월출산 / ▶ 무등산 / ▶ 무안고덕산 / ▶ 장안산 / ▶ 오리유산");
             System.out.print("입력 :");
             String commandMountain = Container.getSc().nextLine().trim();
 
@@ -158,7 +158,7 @@ public class MountainController {
     public void jejuDo() {
         while (true) {
             System.out.println("\n== 제주도 지역의 산을 선택해주세요. ==");
-            System.out.println("\n1.한라산");
+            System.out.println("\n▶ 한라산");
             System.out.print("입력 :");
             String commandMountain = Container.getSc().nextLine().trim();
 

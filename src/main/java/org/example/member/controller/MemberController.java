@@ -87,7 +87,7 @@ public class MemberController {
                 case "여", "여자":
                     break;
                 default:
-                    System.out.println("성별을 다시 기입해 주세요.");
+                    System.out.println("※ 성별을 다시 기입해 주세요. ※");
                     continue;
             }
             break;
@@ -103,7 +103,7 @@ public class MemberController {
             Container.setLoginMember(null);
             System.out.println("로그아웃 되었습니다.");
         } else {
-            System.out.println("로그아웃 상태입니다.");
+            System.out.println("※ 로그아웃 상태입니다. ※");
         }
         return null;
     }
