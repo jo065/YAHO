@@ -3,12 +3,12 @@ package org.example.area.entity;
 
 import org.example.Container;
 import org.example.DefaultCommand;
-import org.example.mountain.controller.MountainController;
+import org.example.mountain.entity.MountainList;
 
 public class Area {
     // 지역을 선택하는 메인화면
     public void areaSelcet() {
-        MountainController mountainController = new MountainController();
+        MountainList mountainList = new MountainList();
 
         while (true) {
             System.out.println("\n== 지역을 선택해주세요. ==");
@@ -18,22 +18,22 @@ public class Area {
 
             switch (commandArea) {
                 case "경기도":
-                    mountainController.gyeonggiDo();
+                    mountainList.gyeonggiDo();
                     break;
                 case "강원도":
-                    mountainController.gangwonDo();
+                    mountainList.gangwonDo();
                     break;
                 case "충청도":
-                    mountainController.chungcheongDo();
+                    mountainList.chungcheongDo();
                     break;
                 case "전라도":
-                    mountainController.jeollaDo();
+                    mountainList.jeollaDo();
                     break;
                 case "경상도":
-                    mountainController.kyongsangDo();
+                    mountainList.kyongsangDo();
                     break;
                 case "제주도":
-                    mountainController.jejuDo();
+                    mountainList.jejuDo();
                     break;
                 default:
                     System.out.println();
