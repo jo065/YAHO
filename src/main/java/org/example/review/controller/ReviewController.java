@@ -86,7 +86,7 @@ public class ReviewController {
         for (int i = 0; i < reviewRepository.getReviews().size(); i++) {
             if (ReviewRepository.getReviews().get(i).getMemberId().equals(Container.getLoginMember().getUserId()) == false) {
                 System.out.println("※ 작성한 리뷰가 없습니다. ※");
-                return;
+
             } else {
                 System.out.println("나의 리뷰 목록이 출력되었습니다. 수정할 리뷰번호를 선택해주세요.");
 
@@ -120,9 +120,9 @@ public class ReviewController {
                 String modifyContent = Container.getSc().nextLine().trim();
 
                 reviewService.modifyService(review, modifyTitle, modifyContent);
-            }
-            System.out.println(id + "번 리뷰가 수정되었습니다.");
 
+                System.out.println(id + "번 리뷰가 수정되었습니다.");
+            }
             break;
         }
         mainScreen.mainSelect();
@@ -139,7 +139,7 @@ public class ReviewController {
         for (int i = 0; i < reviewRepository.getReviews().size(); i++) {
             if (ReviewRepository.getReviews().get(i).getMemberId().equals(Container.getLoginMember().getUserId()) == false) {
                 System.out.println("※ 작성한 리뷰가 없습니다. ※");
-                return;
+
             } else {
                 System.out.println("나의 리뷰 목록이 출력되었습니다. 삭제할 리뷰번호를 선택해주세요.");
 
