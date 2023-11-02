@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class MountainRepository {
     private DBConnection dbConnection;
-    List<Mountain> mountains = new ArrayList<>();
+    private static List<Mountain> mountains = new ArrayList<>();
 
     public MountainRepository(){
         dbConnection = Container.getDBconnection();
