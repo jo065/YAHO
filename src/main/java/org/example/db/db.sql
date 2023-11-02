@@ -9,6 +9,18 @@ CREATE TABLE `mountain` (
                             course text NOT NULL
 );
 
+INSERT INTO `mountain`
+SET name = '청계산',
+feature = '확인',
+course = '잘나옴';
+
+INSERT INTO `mountain`
+SET name = '불장산',
+feature = '확인2',
+course = '잘나옴2';
+
+
+SELECT * FROM `mountain`;
 
 CREATE TABLE `member`(
                          id int UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
