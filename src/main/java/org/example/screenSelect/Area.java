@@ -1,4 +1,5 @@
-package org.example.area.entity;
+package org.example.screenSelect;
+
 
 import org.example.Container;
 import org.example.entity.DefaultCommand;
