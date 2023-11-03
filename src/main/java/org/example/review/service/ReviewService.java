@@ -5,18 +5,19 @@ import lombok.Setter;
 import org.example.review.entity.Review;
 import org.example.review.repository.ReviewRepository;
 
+import java.util.List;
+
 @Getter
 @Setter
 public class ReviewService {
     ReviewRepository reviewRepository = new ReviewRepository();
 
-    public void writeService(long id, String title, String content, int score, String memberId, String regDate) {
-        reviewRepository.writeRepository(id, title, content, score, memberId, regDate);
+    public List<Review> getReviewListAll() {
+        return this.reviewRepository.getReviewListAll();
     }
 
-    public void listService() {
-        reviewRepository.listRepository();
-
+    public void writeService(String title, String content, int score, String memberId, String regDate) {
+        reviewRepository.writeRepository(title, content, score, memberId);
     }
 
     public void modifyService(Review review, String modifyTitle, String modifyContent) {
@@ -29,6 +30,9 @@ public class ReviewService {
 
     }
 
+    public Review getFindByUserIdService(){
+        return reviewRepository.getFindByUserIdRepository();
+    }
     public Review getfindByIdService(int id) {
         return reviewRepository.getfindByIdRepository(id);
     }

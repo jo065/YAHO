@@ -1,25 +1,29 @@
 package org.example.review.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.example.util.Util;
 
+import java.util.Map;
+
 @Getter
 @Setter
+@AllArgsConstructor
 public class Review {
-    private long id;
+    private int id;
     private String content;
     private String title;
     private int score;
     private String memberId;
     private String regDate;
 
-    public Review(long id, String title, String content, int score, String memberId, String regDate) {
-        this.id = id;
-        this.content = content;
-        this.title = title;
-        this.score = score;
-        this.memberId = memberId;
-        this.regDate = regDate;
+    public Review(Map<String, Object> row) {
+        this.id = (int) row.get("id");
+        this.title = (String) row.get("title");
+        this.content = (String) row.get("content");
+        this.score = (int) row.get("score");
+        this.memberId = (String) row.get("memberId");
+        this.regDate = (String) row.get("regDate");
     }
 }
