@@ -8,7 +8,7 @@ import org.example.screenSelect.MainScreen;
 
 public class MountainController {
     MountainService mountainService = new MountainService();
-    MainScreen mainScreen = new MainScreen();
+
     public void mountainFeature(String name){
 
         Mountain mountain = mountainService.findByMountainRepository(name);
