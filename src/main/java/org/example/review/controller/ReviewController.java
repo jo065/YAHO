@@ -7,9 +7,10 @@ import org.example.review.entity.Review;
 import org.example.review.service.ReviewService;
 import org.example.util.Util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ReviewController {
-    ReviewRepository reviewRepository = new ReviewRepository();
-    private static long id = 1;
     private static MainScreen mainScreen = new MainScreen();
     ReviewService reviewService = new ReviewService();
 
@@ -40,7 +41,7 @@ public class ReviewController {
 
         String memberId = Container.getLoginMember().getUserId();
 
-        reviewService.writeService(id, title, content, score, memberId, Util.regDate());
+        reviewService.writeService(title, content, score, memberId, Util.regDate());
 
         System.out.println(memberId + "님의 리뷰가 작성되었습니다.");
 
@@ -48,10 +49,15 @@ public class ReviewController {
     }
 
     public void fullReview() {
+        List<Review> reviews = reviewService.getReviewListAll();
+
         System.out.println("리뷰 번호 / 제목 / 내용 / 별점 / 작성자");
         System.out.println("-".repeat(29));
 
-        reviewService.listService();
+        for (int i = 0; i < reviews.size(); i++) {
+            Review review = reviews.get(i);
+            System.out.printf("%d / %s / %s / %d / %s\n", review.getId(), review.getTitle(), review.getContent(), review.getScore(), review.getMemberId());
+        }
 
         System.out.println("리뷰 목록이 출력되었습니다.");
         mainScreen.mainSelect();
@@ -59,14 +65,16 @@ public class ReviewController {
 
     public void myReview() {
 
-        if (reviewRepository.getReviews().size() == 0) {
+        List<Review> reviews = reviewService.getReviewListAll();
+
+        if (reviews.size() == 0) {
             System.out.println("※ 작성한 리뷰가 없습니다. ※");
         }
 
         reviewService.myReviewListService();
 
-        for (int i = 0; i < reviewRepository.getReviews().size(); i++) {
-            if (ReviewRepository.getReviews().get(i).getMemberId().equals(Container.getLoginMember().getUserId()) == false) {
+        for (int i = 0; i < reviews.size(); i++) {
+            if (reviewService.getFindByUserIdService() == null) {
                 System.out.println("※ 작성한 리뷰가 없습니다. ※");
             } else {
                 System.out.println("나의 리뷰 목록이 출력되었습니다.");
@@ -77,14 +85,16 @@ public class ReviewController {
     }
 
     public void modify() {
+        List<Review> reviews = reviewService.getReviewListAll();
 
-        if (reviewRepository.getReviews().size() == 0) {
+        if (reviews.size() == 0) {
             System.out.println("※ 작성한 리뷰가 없습니다. ※");
         }
+// 내 리뷰 출력구문
         reviewService.myReviewListService();
 
-        for (int i = 0; i < reviewRepository.getReviews().size(); i++) {
-            if (ReviewRepository.getReviews().get(i).getMemberId().equals(Container.getLoginMember().getUserId()) == false) {
+        for (int i = 0; i < reviews.size(); i++) {
+            if (reviewService.getFindByUserIdService() == null) {
                 System.out.println("※ 작성한 리뷰가 없습니다. ※");
             } else {
                 System.out.println("나의 리뷰 목록이 출력되었습니다. 수정할 리뷰번호를 선택해주세요.");
@@ -122,6 +132,7 @@ public class ReviewController {
 
                 System.out.println(id + "번 리뷰가 수정되었습니다.");
             }
+
             break;
         }
         mainScreen.mainSelect();
@@ -129,14 +140,12 @@ public class ReviewController {
 
     public void remove() {
 
-        if (reviewRepository.getReviews().size() == 0) {
-            System.out.println("※ 작성한 리뷰가 없습니다. ※");
-        }
+        List<Review> reviews = reviewService.getReviewListAll();
 
         reviewService.myReviewListService();
 
-        for (int i = 0; i < reviewRepository.getReviews().size(); i++) {
-            if (ReviewRepository.getReviews().get(i).getMemberId().equals(Container.getLoginMember().getUserId()) == false) {
+        for (int i = 0; i < reviews.size(); i++) {
+            if (reviewService.getFindByUserIdService() == null) {
                 System.out.println("※ 작성한 리뷰가 없습니다. ※");
             } else {
                 System.out.println("나의 리뷰 목록이 출력되었습니다. 삭제할 리뷰번호를 선택해주세요.");
