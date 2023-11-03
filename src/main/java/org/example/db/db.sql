@@ -5,20 +5,23 @@ USE `yaho`;
 CREATE TABLE `mountain` (
                             id int UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
                             name char(100) NOT NULL UNIQUE,
-                            feature text NOT NULL,
+                            features text NOT NULL,
                             course text NOT NULL
 );
 
 INSERT INTO `mountain`
 SET name = '청계산',
-feature = '확인',
+features = '청계산 좋아요',
 course = '잘나옴';
 
 INSERT INTO `mountain`
 SET name = '불장산',
-feature = '확인2',
+features = '확인2',
 course = '잘나옴2';
 
+DROP table `mountain`;
+DELETE FROM `mountain`;
+DELETE FROM `mountain` where name = '불장산';
 
 SELECT * FROM `mountain`;
 

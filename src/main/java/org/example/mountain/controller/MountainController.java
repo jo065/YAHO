@@ -20,10 +20,5 @@ public class MountainController {
 
             System.out.printf("\n %s\n %s\n %s\n", mountain.getName(), mountain.getFeatures(), mountain.getCourse());
         }
-
-        if (mountain == null){
-            System.out.println("※ 존재하지 않는 산 정보입니다. 다시 입력해주세요. ※");
-        }
-
     }
 }
