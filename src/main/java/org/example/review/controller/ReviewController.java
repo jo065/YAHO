@@ -13,7 +13,6 @@ import java.util.List;
 public class ReviewController {
     private static MainScreen mainScreen = new MainScreen();
     ReviewService reviewService = new ReviewService();
-
     public void write() {
 
         System.out.println("\n== 리뷰를 작성해주세요. ==");
@@ -47,7 +46,6 @@ public class ReviewController {
 
         mainScreen.mainSelect();
     }
-
     public void fullReview() {
         List<Review> reviews = reviewService.getReviewListAll();
 
@@ -62,14 +60,9 @@ public class ReviewController {
         System.out.println("리뷰 목록이 출력되었습니다.");
         mainScreen.mainSelect();
     }
-
     public void myReview() {
 
         List<Review> reviews = reviewService.getReviewListAll();
-
-        if (reviews.size() == 0) {
-            System.out.println("※ 작성한 리뷰가 없습니다. ※");
-        }
 
         reviewService.myReviewListService();
 
@@ -83,7 +76,6 @@ public class ReviewController {
         }
         mainScreen.mainSelect();
     }
-
     public void modify() {
         List<Review> reviews = reviewService.getReviewListAll();
 
@@ -137,7 +129,6 @@ public class ReviewController {
         }
         mainScreen.mainSelect();
     }
-
     public void remove() {
 
         List<Review> reviews = reviewService.getReviewListAll();
