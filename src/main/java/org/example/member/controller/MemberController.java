@@ -44,7 +44,6 @@ public class MemberController {
     // 회원가입
     public void sign() {
 
-//        long id = 1;
         String userId;
         String password;
         String gender;
@@ -52,13 +51,14 @@ public class MemberController {
         while (true) {
             System.out.print("새로운 아이디 : ");
             userId = Container.getSc().nextLine().trim();
-//            boolean loginchecked = false;
 
             Member member = memberService.findByUserId(userId);
 
             if (member != null) {
                 System.out.println("※ 이미 존재하는 아이디 입니다. 다시 입력해주세요. ※");
                 continue;
+            }else {
+                System.out.println("사용 가능한 아이디 입니다.");
             }
             break;
         }
@@ -82,9 +82,9 @@ public class MemberController {
             System.out.print("성별 : ");
             gender = Container.getSc().nextLine().trim();
             switch (gender) {
-                case "남", "남자":
+                case "남", "남자", "남성":
                     break;
-                case "여", "여자":
+                case "여", "여자", "여성":
                     break;
                 default:
                     System.out.println("※ 성별을 다시 기입해 주세요. ※");
