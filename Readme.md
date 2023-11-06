@@ -10,7 +10,7 @@
 
 # 🔨 개발 환경
 - 협업 툴 : Github
-- 버전 및 이슈관리 : Github, Github Issues, Github Project
+- 버전 및 이슈관리 : Github, Github Issues, Github Project , DBeaver
 - Back-end : IntelliJ IDEA 2023.2.4
 - 디자인 : 카카오 오븐, PPT(미리캔버스, 구글 프레젠테이션)
 # 🔑 설계
