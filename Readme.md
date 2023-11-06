@@ -17,7 +17,7 @@
 [ERD설계](https://cdn.discordapp.com/attachments/1159767925218082839/1169832460754886767/2023-11-03_115303.png?ex=6556d661&is=65446161&hm=cee9a95dedd0b59765f9a19f389301046150ed9e63622ca454dd98fadff7604e&)
 
 # 🎬 시연
-[![movie](https://img.youtube.com/vi/Tx5_32oVNAg/0.jpg)](https://youtu.be/Tx5_32oVNAg)
+[![YAHO 초급 프로젝트 시연 (5:33)](https://img.youtube.com/vi/Tx5_32oVNAg/0.jpg)](https://youtu.be/Tx5_32oVNAg)
 
 # 🧐 회고
 - 김조은 :
