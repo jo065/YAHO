@@ -9,9 +9,9 @@
 - 최경현 : erd설계, 유지보수, 기능구현, db연결, 발표, 자료조사
 
 # 🔨 개발 환경
+- IDE : IntelliJ IDEA 2023.2.4
 - 협업 툴 : Github
 - 버전 및 이슈관리 : Github, Github Issues, Github Project , DBeaver
-- Back-end : IntelliJ IDEA 2023.2.4
 - 디자인 : 카카오 오븐, PPT(미리캔버스, 구글 프레젠테이션)
 # 🔑 설계
 [ERD설계](https://cdn.discordapp.com/attachments/1159767925218082839/1169832460754886767/2023-11-03_115303.png?ex=6556d661&is=65446161&hm=cee9a95dedd0b59765f9a19f389301046150ed9e63622ca454dd98fadff7604e&)
